@@ -1,0 +1,1357 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Anamika A B | Computer Science Engineer</title>
+
+    <meta
+      name="description"
+      content="Portfolio of Anamika A B — Computer Science Engineering Student, Full Stack Developer and Machine Learning Enthusiast."
+    />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+
+    <style>
+      /* =========================
+           RESET
+        ========================= */
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        scroll-behavior: smooth;
+      }
+
+      :root {
+        --bg: #07111f;
+        --bg-secondary: #0b1728;
+        --card: rgba(17, 31, 51, 0.72);
+
+        --primary: #64ffda;
+        --primary-dark: #42d9b7;
+
+        --text: #e6edf7;
+        --muted: #94a8c2;
+
+        --border: rgba(255, 255, 255, 0.09);
+
+        --gradient: linear-gradient(135deg, #64ffda, #7c7cff);
+      }
+
+      body {
+        font-family: "Inter", sans-serif;
+        background:
+          radial-gradient(
+            circle at top right,
+            rgba(100, 255, 218, 0.08),
+            transparent 30%
+          ),
+          var(--bg);
+
+        color: var(--text);
+        line-height: 1.7;
+      }
+
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+
+      img {
+        max-width: 100%;
+      }
+
+      .container {
+        width: min(1120px, 90%);
+        margin: auto;
+      }
+
+      /* =========================
+           NAVBAR
+        ========================= */
+
+      header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+
+        z-index: 1000;
+
+        background: rgba(7, 17, 31, 0.82);
+        backdrop-filter: blur(14px);
+
+        border-bottom: 1px solid var(--border);
+      }
+
+      nav {
+        height: 75px;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .logo {
+        font-family: "Space Grotesk", sans-serif;
+        font-size: 24px;
+        font-weight: 700;
+        color: var(--primary);
+      }
+
+      .logo span {
+        color: white;
+      }
+
+      .nav-links {
+        display: flex;
+        gap: 28px;
+        list-style: none;
+      }
+
+      .nav-links a {
+        color: var(--muted);
+        font-size: 14px;
+        font-weight: 500;
+
+        transition: 0.3s;
+      }
+
+      .nav-links a:hover {
+        color: var(--primary);
+      }
+
+      .menu-btn {
+        display: none;
+        color: white;
+        font-size: 25px;
+        cursor: pointer;
+      }
+
+      /* =========================
+           HERO
+        ========================= */
+
+      .hero {
+        min-height: 100vh;
+
+        display: flex;
+        align-items: center;
+
+        padding-top: 90px;
+
+        position: relative;
+        overflow: hidden;
+      }
+
+      .hero::before {
+        content: "";
+
+        position: absolute;
+
+        width: 350px;
+        height: 350px;
+
+        border-radius: 50%;
+
+        background: rgba(100, 255, 218, 0.08);
+
+        filter: blur(80px);
+
+        top: 100px;
+        right: 5%;
+      }
+
+      .hero-content {
+        max-width: 800px;
+      }
+
+      .hello {
+        color: var(--primary);
+
+        font-family: monospace;
+
+        font-size: 16px;
+
+        margin-bottom: 15px;
+      }
+
+      .hero h1 {
+        font-family: "Space Grotesk", sans-serif;
+
+        font-size: clamp(45px, 8vw, 80px);
+
+        line-height: 1.05;
+
+        margin-bottom: 10px;
+      }
+
+      .hero h1 span {
+        background: var(--gradient);
+
+        -webkit-background-clip: text;
+        background-clip: text;
+
+        color: transparent;
+      }
+
+      .hero h2 {
+        color: #b9c7d9;
+
+        font-size: clamp(24px, 4vw, 38px);
+
+        margin-bottom: 25px;
+      }
+
+      .hero p {
+        max-width: 650px;
+
+        color: var(--muted);
+
+        font-size: 17px;
+      }
+
+      .hero-buttons {
+        display: flex;
+
+        gap: 15px;
+
+        margin-top: 35px;
+
+        flex-wrap: wrap;
+      }
+
+      .btn {
+        display: inline-flex;
+
+        align-items: center;
+
+        gap: 9px;
+
+        padding: 13px 22px;
+
+        border-radius: 8px;
+
+        font-weight: 600;
+
+        transition: 0.3s;
+      }
+
+      .btn-primary {
+        background: var(--primary);
+        color: #06131e;
+      }
+
+      .btn-primary:hover {
+        transform: translateY(-3px);
+
+        box-shadow: 0 10px 30px rgba(100, 255, 218, 0.2);
+      }
+
+      .btn-outline {
+        border: 1px solid var(--primary);
+
+        color: var(--primary);
+      }
+
+      .btn-outline:hover {
+        background: rgba(100, 255, 218, 0.08);
+
+        transform: translateY(-3px);
+      }
+
+      /* =========================
+           SECTIONS
+        ========================= */
+
+      section {
+        padding: 100px 0;
+      }
+
+      .section-title {
+        margin-bottom: 50px;
+      }
+
+      .section-title span {
+        color: var(--primary);
+
+        font-family: monospace;
+
+        font-size: 15px;
+      }
+
+      .section-title h2 {
+        font-family: "Space Grotesk", sans-serif;
+
+        font-size: 38px;
+
+        margin-top: 8px;
+      }
+
+      .section-title h2::after {
+        content: "";
+
+        display: inline-block;
+
+        width: 70px;
+        height: 2px;
+
+        background: var(--primary);
+
+        margin-left: 15px;
+
+        vertical-align: middle;
+      }
+
+      /* =========================
+           ABOUT
+        ========================= */
+
+      .about-grid {
+        display: grid;
+
+        grid-template-columns: 1fr 1fr;
+
+        gap: 60px;
+
+        align-items: center;
+      }
+
+      .about-text p {
+        color: var(--muted);
+
+        margin-bottom: 18px;
+      }
+
+      .about-card {
+        padding: 30px;
+
+        background: var(--card);
+
+        border: 1px solid var(--border);
+
+        border-radius: 16px;
+
+        backdrop-filter: blur(10px);
+      }
+
+      .about-card h3 {
+        color: var(--primary);
+
+        margin-bottom: 20px;
+      }
+
+      .info {
+        display: flex;
+
+        justify-content: space-between;
+
+        padding: 12px 0;
+
+        border-bottom: 1px solid var(--border);
+      }
+
+      .info:last-child {
+        border-bottom: none;
+      }
+
+      .info span:first-child {
+        color: var(--muted);
+      }
+
+      /* =========================
+           SKILLS
+        ========================= */
+
+      .skills-grid {
+        display: grid;
+
+        grid-template-columns: repeat(4, 1fr);
+
+        gap: 18px;
+      }
+
+      .skill-card {
+        background: var(--card);
+
+        border: 1px solid var(--border);
+
+        padding: 25px;
+
+        border-radius: 14px;
+
+        text-align: center;
+
+        transition: 0.3s;
+      }
+
+      .skill-card:hover {
+        transform: translateY(-7px);
+
+        border-color: var(--primary);
+      }
+
+      .skill-card i {
+        font-size: 30px;
+
+        color: var(--primary);
+
+        margin-bottom: 12px;
+      }
+
+      .skill-card h3 {
+        font-size: 16px;
+      }
+
+      /* =========================
+           PROJECTS
+        ========================= */
+
+      .projects-grid {
+        display: grid;
+
+        grid-template-columns: repeat(3, 1fr);
+
+        gap: 22px;
+      }
+
+      .project-card {
+        display: flex;
+
+        flex-direction: column;
+
+        background: var(--card);
+
+        border: 1px solid var(--border);
+
+        border-radius: 15px;
+
+        overflow: hidden;
+
+        transition: 0.35s;
+      }
+
+      .project-card:hover {
+        transform: translateY(-8px);
+
+        border-color: rgba(100, 255, 218, 0.5);
+
+        box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
+      }
+
+      .project-top {
+        padding: 25px 25px 10px;
+
+        display: flex;
+
+        justify-content: space-between;
+
+        align-items: center;
+      }
+
+      .project-top i {
+        color: var(--primary);
+
+        font-size: 25px;
+      }
+
+      .github-link {
+        color: var(--muted);
+
+        transition: 0.3s;
+      }
+
+      .github-link:hover {
+        color: var(--primary);
+      }
+
+      .project-content {
+        padding: 10px 25px 25px;
+
+        flex: 1;
+      }
+
+      .project-content h3 {
+        font-size: 21px;
+
+        margin-bottom: 12px;
+      }
+
+      .project-content p {
+        color: var(--muted);
+
+        font-size: 14px;
+
+        margin-bottom: 20px;
+      }
+
+      .tags {
+        display: flex;
+
+        gap: 8px;
+
+        flex-wrap: wrap;
+      }
+
+      .tag {
+        padding: 5px 9px;
+
+        border-radius: 5px;
+
+        background: rgba(100, 255, 218, 0.08);
+
+        color: var(--primary);
+
+        font-size: 11px;
+      }
+
+      /* =========================
+           ACHIEVEMENTS
+        ========================= */
+
+      .timeline {
+        position: relative;
+
+        max-width: 800px;
+
+        margin: auto;
+      }
+
+      .timeline::before {
+        content: "";
+
+        position: absolute;
+
+        left: 10px;
+        top: 0;
+        bottom: 0;
+
+        width: 2px;
+
+        background: var(--border);
+      }
+
+      .timeline-item {
+        position: relative;
+
+        padding-left: 45px;
+
+        margin-bottom: 35px;
+      }
+
+      .timeline-item::before {
+        content: "";
+
+        position: absolute;
+
+        left: 3px;
+        top: 7px;
+
+        width: 16px;
+        height: 16px;
+
+        border-radius: 50%;
+
+        background: var(--primary);
+
+        box-shadow: 0 0 15px rgba(100, 255, 218, 0.5);
+      }
+
+      .timeline-item h3 {
+        margin-bottom: 5px;
+      }
+
+      .timeline-item p {
+        color: var(--muted);
+
+        font-size: 14px;
+      }
+
+      /* =========================
+           CONTACT
+        ========================= */
+
+      .contact-box {
+        text-align: center;
+
+        max-width: 750px;
+
+        margin: auto;
+      }
+
+      .contact-box h2 {
+        font-family: "Space Grotesk", sans-serif;
+
+        font-size: 42px;
+
+        margin-bottom: 20px;
+      }
+
+      .contact-box p {
+        color: var(--muted);
+
+        margin-bottom: 30px;
+      }
+
+      .socials {
+        display: flex;
+
+        justify-content: center;
+
+        gap: 15px;
+
+        margin-top: 30px;
+      }
+
+      .social {
+        width: 48px;
+        height: 48px;
+
+        display: flex;
+
+        align-items: center;
+        justify-content: center;
+
+        border: 1px solid var(--border);
+
+        border-radius: 50%;
+
+        color: var(--muted);
+
+        transition: 0.3s;
+      }
+
+      .social:hover {
+        color: var(--primary);
+
+        border-color: var(--primary);
+
+        transform: translateY(-4px);
+      }
+
+      /* =========================
+           FOOTER
+        ========================= */
+
+      footer {
+        border-top: 1px solid var(--border);
+
+        padding: 25px 0;
+
+        text-align: center;
+
+        color: var(--muted);
+
+        font-size: 13px;
+      }
+
+      /* =========================
+           SCROLL ANIMATION
+        ========================= */
+
+      .reveal {
+        opacity: 0;
+
+        transform: translateY(30px);
+
+        transition:
+          opacity 0.7s ease,
+          transform 0.7s ease;
+      }
+
+      .reveal.active {
+        opacity: 1;
+
+        transform: translateY(0);
+      }
+
+      /* =========================
+           MOBILE
+        ========================= */
+
+      @media (max-width: 900px) {
+        .skills-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+
+        .projects-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+
+        .about-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      @media (max-width: 650px) {
+        .nav-links {
+          position: absolute;
+
+          top: 75px;
+          left: 0;
+
+          width: 100%;
+
+          display: none;
+
+          flex-direction: column;
+
+          padding: 25px;
+
+          background: #07111f;
+
+          border-bottom: 1px solid var(--border);
+        }
+
+        .nav-links.show {
+          display: flex;
+        }
+
+        .menu-btn {
+          display: block;
+        }
+
+        .skills-grid,
+        .projects-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .hero h1 {
+          font-size: 48px;
+        }
+
+        section {
+          padding: 75px 0;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- =========================
+     NAVBAR
+========================= -->
+
+    <header>
+      <div class="container">
+        <nav>
+          <a href="#home" class="logo"> Anamika<span>.</span> </a>
+
+          <ul class="nav-links" id="navLinks">
+            <li>
+              <a href="#home">Home</a>
+            </li>
+
+            <li>
+              <a href="#about">About</a>
+            </li>
+
+            <li>
+              <a href="#skills">Skills</a>
+            </li>
+
+            <li>
+              <a href="#projects">Projects</a>
+            </li>
+
+            <li>
+              <a href="#achievements">Achievements</a>
+            </li>
+
+            <li>
+              <a href="#contact">Contact</a>
+            </li>
+          </ul>
+
+          <div class="menu-btn" id="menuBtn">
+            <i class="fa-solid fa-bars"></i>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <!-- =========================
+     HERO
+========================= -->
+
+    <section class="hero" id="home">
+      <div class="container">
+        <div class="hero-content reveal">
+          <div class="hello">Hello, I'm</div>
+
+          <h1>Anamika <span>A.B</span></h1>
+
+          <h2>Computer Science Engineering Student</h2>
+
+          <p>
+            I build practical software solutions with a focus on Full Stack
+            Development, Machine Learning and emerging technologies. I'm
+            passionate about learning, building and solving real-world problems
+            through technology.
+          </p>
+
+          <div class="hero-buttons">
+            <a href="#projects" class="btn btn-primary">
+              <i class="fa-solid fa-code"></i>
+              View My Work
+            </a>
+
+            <a
+              href="https://github.com/ab-anamika26"
+              target="_blank"
+              class="btn btn-outline"
+            >
+              <i class="fa-brands fa-github"></i>
+              GitHub
+            </a>
+
+            <a
+              href="https://www.linkedin.com/in/anamikaab/"
+              target="_blank"
+              class="btn btn-outline"
+            >
+              <i class="fa-brands fa-linkedin"></i>
+              LinkedIn
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================
+     ABOUT
+========================= -->
+
+    <section id="about">
+      <div class="container">
+        <div class="section-title reveal">
+          <span>01. ABOUT ME</span>
+
+          <h2>Who I Am</h2>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-text reveal">
+            <p>
+              I'm a Computer Science Engineering student interested in creating
+              useful and meaningful software solutions.
+            </p>
+
+            <p>
+              My interests include Full Stack Web Development, Artificial
+              Intelligence, Machine Learning, Cybersecurity and Software
+              Engineering.
+            </p>
+
+            <p>
+              I enjoy turning ideas into working applications and continuously
+              improving my technical skills through projects, certifications and
+              hands-on learning.
+            </p>
+          </div>
+
+          <div class="about-card reveal">
+            <h3>
+              <i class="fa-solid fa-user"></i>
+              Quick Information
+            </h3>
+
+            <div class="info">
+              <span>Education</span>
+              <strong>B.Tech CSE</strong>
+            </div>
+
+            <div class="info">
+              <span>Focus</span>
+              <strong>Full Stack Development</strong>
+            </div>
+
+            <div class="info">
+              <span>Interest</span>
+              <strong>AI & Machine Learning</strong>
+            </div>
+
+            <div class="info">
+              <span>Development</span>
+              <strong>Web & Software</strong>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================
+     SKILLS
+========================= -->
+
+    <section id="skills">
+      <div class="container">
+        <div class="section-title reveal">
+          <span>02. WHAT I WORK WITH</span>
+
+          <h2>Skills & Technologies</h2>
+        </div>
+
+        <div class="skills-grid">
+          <div class="skill-card reveal">
+            <i class="fa-brands fa-html5"></i>
+
+            <h3>HTML5</h3>
+          </div>
+
+          <div class="skill-card reveal">
+            <i class="fa-brands fa-css3-alt"></i>
+
+            <h3>CSS3</h3>
+          </div>
+
+          <div class="skill-card reveal">
+            <i class="fa-brands fa-js"></i>
+
+            <h3>JavaScript</h3>
+          </div>
+
+          <div class="skill-card reveal">
+            <i class="fa-brands fa-python"></i>
+
+            <h3>Python</h3>
+          </div>
+
+          <div class="skill-card reveal">
+            <i class="fa-brands fa-php"></i>
+
+            <h3>PHP</h3>
+          </div>
+
+          <div class="skill-card reveal">
+            <i class="fa-solid fa-database"></i>
+
+            <h3>Database</h3>
+          </div>
+
+          <div class="skill-card reveal">
+            <i class="fa-solid fa-brain"></i>
+
+            <h3>Machine Learning</h3>
+          </div>
+
+          <div class="skill-card reveal">
+            <i class="fa-brands fa-github"></i>
+
+            <h3>Git & GitHub</h3>
+          </div>
+
+          <div class="skill-card reveal">
+            <i class="fa-solid fa-shield-halved"></i>
+
+            <h3>Cybersecurity</h3>
+          </div>
+
+          <div class="skill-card reveal">
+            <i class="fa-solid fa-cloud"></i>
+
+            <h3>Cloud Computing</h3>
+          </div>
+
+          <div class="skill-card reveal">
+            <i class="fa-brands fa-docker"></i>
+
+            <h3>Docker</h3>
+          </div>
+
+          <div class="skill-card reveal">
+            <i class="fa-solid fa-code"></i>
+
+            <h3>Software Engineering</h3>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================
+     PROJECTS
+========================= -->
+
+    <section id="projects">
+      <div class="container">
+        <div class="section-title reveal">
+          <span>03. MY WORK</span>
+
+          <h2>Featured Projects</h2>
+        </div>
+
+        <div class="projects-grid">
+          <!-- PROJECT 1 -->
+
+          <article class="project-card reveal">
+            <div class="project-top">
+              <i class="fa-regular fa-folder"></i>
+
+              <a
+                href="https://github.com/ab-anamika26/wd-101"
+                target="_blank"
+                class="github-link"
+              >
+                <i class="fa-brands fa-github"></i>
+              </a>
+            </div>
+
+            <div class="project-content">
+              <h3>WD-101</h3>
+
+              <p>
+                A web development project demonstrating frontend and
+                JavaScript-based web development.
+              </p>
+
+              <div class="tags">
+                <span class="tag">HTML</span>
+                <span class="tag">JavaScript</span>
+                <span class="tag">Web Development</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- PROJECT 2 -->
+
+          <article class="project-card reveal">
+            <div class="project-top">
+              <i class="fa-regular fa-folder"></i>
+
+              <a
+                href="https://github.com/ab-anamika26/vidya"
+                target="_blank"
+                class="github-link"
+              >
+                <i class="fa-brands fa-github"></i>
+              </a>
+            </div>
+
+            <div class="project-content">
+              <h3>Vidya</h3>
+
+              <p>
+                A web-based project focused on creating and managing digital
+                content through HTML.
+              </p>
+
+              <div class="tags">
+                <span class="tag">HTML</span>
+                <span class="tag">Web</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- PROJECT 3 -->
+
+          <article class="project-card reveal">
+            <div class="project-top">
+              <i class="fa-regular fa-folder"></i>
+
+              <a
+                href="https://github.com/ab-anamika26/anamika-portfolio"
+                target="_blank"
+                class="github-link"
+              >
+                <i class="fa-brands fa-github"></i>
+              </a>
+            </div>
+
+            <div class="project-content">
+              <h3>Portfolio Website</h3>
+
+              <p>
+                A personal portfolio project showcasing projects, skills,
+                achievements and profile.
+              </p>
+
+              <div class="tags">
+                <span class="tag">HTML</span>
+                <span class="tag">CSS</span>
+                <span class="tag">JavaScript</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- PROJECT 4 -->
+
+          <article class="project-card reveal">
+            <div class="project-top">
+              <i class="fa-regular fa-folder"></i>
+
+              <a
+                href="https://github.com/ab-anamika26/BMI_Calculator"
+                target="_blank"
+                class="github-link"
+              >
+                <i class="fa-brands fa-github"></i>
+              </a>
+            </div>
+
+            <div class="project-content">
+              <h3>BMI Calculator</h3>
+
+              <p>
+                A full-stack BMI application containing PHP functionality,
+                JavaScript, forms, charts and database-related components.
+              </p>
+
+              <div class="tags">
+                <span class="tag">PHP</span>
+                <span class="tag">JavaScript</span>
+                <span class="tag">SQL</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- PROJECT 5 -->
+
+          <article class="project-card reveal">
+            <div class="project-top">
+              <i class="fa-regular fa-folder"></i>
+
+              <a
+                href="https://github.com/ab-anamika26/leetstack"
+                target="_blank"
+                class="github-link"
+              >
+                <i class="fa-brands fa-github"></i>
+              </a>
+            </div>
+
+            <div class="project-content">
+              <h3>LeetStack</h3>
+
+              <p>
+                A JavaScript-based project focused on programming and
+                problem-solving concepts.
+              </p>
+
+              <div class="tags">
+                <span class="tag">JavaScript</span>
+                <span class="tag">Programming</span>
+                <span class="tag">Algorithms</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- PROJECT 6 -->
+
+          <article class="project-card reveal">
+            <div class="project-top">
+              <i class="fa-regular fa-folder"></i>
+
+              <a
+                href="https://github.com/ab-anamika26/CodeAlpha-Unemployment-Analysis"
+                target="_blank"
+                class="github-link"
+              >
+                <i class="fa-brands fa-github"></i>
+              </a>
+            </div>
+
+            <div class="project-content">
+              <h3>Unemployment Analysis</h3>
+
+              <p>
+                A data science project focused on analysing unemployment data
+                using Python and Jupyter Notebook.
+              </p>
+
+              <div class="tags">
+                <span class="tag">Python</span>
+                <span class="tag">Data Science</span>
+                <span class="tag">Jupyter</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================
+     ACHIEVEMENTS
+========================= -->
+
+    <section id="achievements">
+      <div class="container">
+        <div class="section-title reveal">
+          <span>04. LEARNING JOURNEY</span>
+
+          <h2>Certifications & Achievements</h2>
+        </div>
+
+        <div class="timeline">
+          <!-- ACHIEVEMENT 1 -->
+
+          <div class="timeline-item reveal">
+            <h3>Infosys Springboard Virtual Internship</h3>
+
+            <p>
+              Selected for the Infosys Springboard Virtual Internship 6.0
+              program, gaining exposure to professional learning and
+              technology-focused activities.
+            </p>
+          </div>
+
+          <!-- ACHIEVEMENT 2 -->
+
+          <div class="timeline-item reveal">
+            <h3>Web Development Certification</h3>
+
+            <p>
+              Completed a Web Development course and strengthened practical
+              skills in building responsive and interactive web applications.
+            </p>
+          </div>
+
+          <!-- ACHIEVEMENT 3 -->
+
+          <div class="timeline-item reveal">
+            <h3>Power Communication & Persona Enhancement</h3>
+
+            <p>
+              Completed the mPOWER Power Communication and Persona Enhancement
+              workshop, focusing on communication and professional development.
+            </p>
+          </div>
+
+          <!-- ACHIEVEMENT 4 -->
+
+          <div class="timeline-item reveal">
+            <h3>Cybersecurity Workshop</h3>
+
+            <p>
+              Participated in a cybersecurity-focused workshop and explored
+              fundamental concepts related to cybersecurity and digital safety.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================
+     CONTACT
+========================= -->
+
+    <section id="contact">
+      <div class="container">
+        <div class="contact-box reveal">
+          <div class="section-title">
+            <span>05. GET IN TOUCH</span>
+
+            <h2>Let's Connect</h2>
+          </div>
+
+          <p>
+            I'm always interested in learning, collaborating on interesting
+            projects and connecting with people passionate about technology.
+          </p>
+
+          <a href="mailto:abanamika26@gmail.com" class="btn btn-primary">
+            <i class="fa-solid fa-envelope"></i>
+
+            Email Me
+          </a>
+
+          <div class="socials">
+            <a
+              href="https://github.com/ab-anamika26"
+              target="_blank"
+              class="social"
+            >
+              <i class="fa-brands fa-github"></i>
+            </a>
+
+            <a
+              href="https://www.linkedin.com/in/anamikaab/"
+              target="_blank"
+              class="social"
+            >
+              <i class="fa-brands fa-linkedin"></i>
+            </a>
+
+            <a href="mailto:abanamika26@gmail.com" class="social">
+              <i class="fa-solid fa-envelope"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================
+     FOOTER
+========================= -->
+
+    <footer>
+      <div class="container">
+        <p>
+          Designed & Built by
+          <strong>Anamika A.B</strong>
+        </p>
+
+        <p>© 2026 Anamika A.B. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <!-- =========================
+     JAVASCRIPT
+========================= -->
+
+    <script>
+      /* MOBILE MENU */
+
+      const menuBtn = document.getElementById("menuBtn");
+
+      const navLinks = document.getElementById("navLinks");
+
+      menuBtn.addEventListener("click", () => {
+        navLinks.classList.toggle("show");
+      });
+
+      /* CLOSE MENU AFTER CLICK */
+
+      document.querySelectorAll(".nav-links a").forEach((link) => {
+        link.addEventListener("click", () => {
+          navLinks.classList.remove("show");
+        });
+      });
+
+      /* SCROLL REVEAL */
+
+      const revealElements = document.querySelectorAll(".reveal");
+
+      const revealOnScroll = () => {
+        revealElements.forEach((element) => {
+          const windowHeight = window.innerHeight;
+
+          const elementTop = element.getBoundingClientRect().top;
+
+          if (elementTop < windowHeight - 80) {
+            element.classList.add("active");
+          }
+        });
+      };
+
+      window.addEventListener("scroll", revealOnScroll);
+
+      revealOnScroll();
+    </script>
+  </body>
+</html>

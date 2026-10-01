@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Anamika | Portfolio</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background: #f5f7fa;
+        margin: 0;
+      }
+
+      header {
+        background: #0a192f;
+        padding: 18px 10%;
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .logo {
+        color: #64ffda;
+        font-size: 26px;
+        text-decoration: none;
+        font-weight: bold;
+      }
+
+      nav a {
+        color: white;
+        text-decoration: none;
+        margin-left: 20px;
+      }
+
+      section {
+        padding: 80px 10%;
+      }
+
+      .project {
+        background: white;
+        padding: 20px;
+        margin-bottom: 20px;
+        border-radius: 10px;
+      }
+
+      /* image styling */
+      .about-container img {
+        width: 260px;
+        border-radius: 20px;
+        box-shadow: 0 8px 25px rgba(10, 25, 47, 0.3);
+        transition: transform 0.4s ease;
+      }
+
+      .about-container img:hover {
+        transform: scale(1.05);
+      }
+
+      /* text content */
+      .about-content h3 {
+        font-size: 24px;
+        color: #0a192f;
+        margin-bottom: 15px;
+      }
+
+      .about-content p {
+        font-size: 16px;
+        line-height: 1.8;
+        margin-bottom: 20px;
+        color: #555;
+      }
+
+      /* highlights */
+      .about-content span {
+        color: #64ffda;
+        font-weight: bold;
+      }
+
+      /* responsive */
+      @media (max-width: 768px) {
+        .about-container {
+          flex-direction: column;
+          text-align: center;
+          padding: 30px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- HEADER -->
+
+    <!-- HOME
+    <section class="home" id="home">
+      <div class="home-img">
+        <img src="p.jpeg" alt="Anamika" />
+      </div>
+      <div class="home-content">
+        <h1>Hi, I'm Anamika</h1>
+        <p>
+          Engineering student passionate about web development. Aspiring full
+          stack developer.
+        </p>
+      </div>
+    </section> -->
+    <header>
+      <a href="#home" class="logo">Anamika</a>
+      <nav>
+        <a href="home.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="skills.html">Skills</a>
+        <a href="projects.html">Projects</a>
+        <a href="achievments.html">achievments</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </header>
+    <!-- ABOUT -->
+    <section class="about" id="about">
+      <h2>About Me</h2>
+      <div class="about-container">
+        <img src="p.jpeg" alt="About Anamika" />
+        <p>
+          I am an engineering student with a strong interest in web development.
+          I enjoy building responsive and user-friendly websites and
+          continuously improving my skills.
+        </p>
+      </div>
+    </section>
+  </body>
+</html>
